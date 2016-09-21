@@ -503,12 +503,13 @@ class CommentBox extends React.Component {
   }
 }
 ```
-Comment를 불러오는 과정을 다시 보면 아래와 같다.
-1. componentWillMount() 호출
-2. render() 호출 및 commentBox 마운트
-3. Component는 API 응답을 기다리다가 받아서 setState()를 호출하고 render()를 호출
-4. componentDidMount() 호출되고 5초마다 this.fetchComments() 호출된다.
-5. componentWillUnMount() 는 DOM으로부터 막 제거될때 호출되고 fetchComments 인터벌은 클리어(해제)된다.
+Comment를 불러오는 과정을 다시 보면 아래와 같다.  
+
+1. componentWillMount() 호출  
+2. render() 호출 및 commentBox 마운트  
+3. Component는 API 응답을 기다리다가 받아서 setState()를 호출하고 render()를 호출  
+4. componentDidMount() 호출되고 5초마다 this.fetchComments() 호출된다.  
+5. componentWillUnMount() 는 DOM으로부터 막 제거될때 호출되고 fetchComments 인터벌은 클리어(해제)된다.  
 
 Comment를 삭제하는 액션을 살펴보자  
 ```javascript
@@ -576,9 +577,10 @@ class CommentBox extends React.Component {
   }
 }
 ```
-결국 흐름이 위에서 아래로 한방향으로 흐르는 것을 알 수 있다.  
-1. CommentBox가 deleteComment 메서드를 콜백으로 Comment 컴포넌트에 넘겨주고 author, body 같은 각 코멘트의 prop도 넘겨준다.
-2. CommentBox가 addComment 메서드를 콜백으로 CommentForm 컴포넌트에 넘겨주고 CommentForm 에서 submit 이벤트가 발생했을때 해당 콜백을 호출한면 된다.
+결국 흐름이 위에서 아래로 한방향으로 흐르는 것을 알 수 있다.   
+
+1. CommentBox가 deleteComment 메서드를 콜백으로 Comment 컴포넌트에 넘겨주고 author, body 같은 각 코멘트의 prop도 넘겨준다.  
+2. CommentBox가 addComment 메서드를 콜백으로 CommentForm 컴포넌트에 넘겨주고 CommentForm 에서 submit 이벤트가 발생했을때 해당 콜백을 호출한면 된다.  
 
 
 
