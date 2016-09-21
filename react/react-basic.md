@@ -582,34 +582,4 @@ class CommentBox extends React.Component {
 1. CommentBox가 deleteComment 메서드를 콜백으로 Comment 컴포넌트에 넘겨주고 author, body 같은 각 코멘트의 prop도 넘겨준다.  
 2. CommentBox가 addComment 메서드를 콜백으로 CommentForm 컴포넌트에 넘겨주고 CommentForm 에서 submit 이벤트가 발생했을때 해당 콜백을 호출한면 된다.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-----
+[reference](https://www.dropbox.com/s/1zabzrnfqzamcq2/CodeSchool-PoweringUpWithReact.pdf?dl=0)
